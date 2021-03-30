@@ -2,13 +2,106 @@
 	"widgets": {
 		"hide": {
 			"SPONSOR": true,
-			"MANAGER": true
+			"MANAGER": false
 		},
-		"enabledWidgets": "*"
+		"enabledWidgets": ["livebar", "header"]
 	},
 	"blocks": {
-		"preventAdd": false,
-		"enabledBlocks": "*",
-		"predefinedBlocks": {}
+		"preventAdd": true,
+		"enabledBlocks": ["richtext", "LiveStream", "Image"],
+		"predefinedBlocks": {
+			"ctn1": {
+				"type": "Image",
+				"allowChangeType": {
+					"SPONSOR": true,
+					"MANAGER": false
+				},
+				"title": "Image",
+				"preventEdit": {
+					"SPONSOR": true,
+					"MANAGER": false
+				},
+				"preventDelete": {
+					"SPONSOR": true,
+					"MANAGER": false
+				},
+				"data": {
+					"heading": "Gallery",
+				    "imageBlockType": "list",
+				    "headingVisibility": true,
+				    "blockWidth": "100%",
+				    "blockHeight": "250px",
+				    "fitHeightToContent": true,
+				    "boundingBox": true,
+				    "images": [{
+				        "url": "https://files-myxp.s3-ap-southeast-1.amazonaws.com/livestream/4K+Facet-crop.jpg"
+				    }, {
+				    	"url": "https://files-myxp.s3-ap-southeast-1.amazonaws.com/livestream/crop-bg.png"
+				    }],
+				    "spaceBetweenImages": "4px",
+				    "contentPadding": "16px"
+				}
+			},
+			"ctn2": {
+				"type": "LiveStream",
+				"allowChangeType": {
+					"SPONSOR": true,
+					"MANAGER": false
+				},
+				"title": "Banner",
+				"preventEdit": {
+					"SPONSOR": true,
+					"MANAGER": false
+				},
+				"preventDelete": {
+					"SPONSOR": true,
+					"MANAGER": false
+				},
+				"data": {
+					"heading": "The MKBHD Setup Tour 2020!",
+				    "livestreamTitle": "The MKBHD Setup Tour 2020!",
+				    "livestreamTitleVisibility": true,
+				    "streamingService": "youtube", 
+				    "livestreamUrl": "https://www.youtube.com/embed/pgmHkfvGYnY",
+				    "displaySomethingWhenNotLive": "image",
+				    "displayImageWhenNotLive": "https://files-myxp.s3-ap-southeast-1.amazonaws.com/livestream/4K+Facet-crop.jpg",
+				    "displayVideoWhenNotLive": "",
+				    "disableVideoQualityOptions": true,
+				    "disableAutoplay": true,
+				    "alignment": "left",
+				    "blockWidth": "100%",
+				    "blockHeight": "400px",
+				    "fitHeightToContent": false,
+				    "boundingBox": true,
+				    "contentPadding": "16px"
+				}
+			},
+			"ctn3": {
+				"type": "RichText",
+				"allowChangeType": {
+					"SPONSOR": true,
+					"MANAGER": false
+				},
+				"title": "Banner",
+				"preventEdit": {
+					"SPONSOR": true,
+					"MANAGER": false
+				},
+				"preventDelete": {
+					"SPONSOR": true,
+					"MANAGER": false
+				},
+				"data": {
+					"heading": "About MKBHD",
+					"textContent": "<p>Marques Keith Brownlee, also known professionally as MKBHD, is an American YouTuber and professional ultimate frisbee player, best known for his technology-focused videos as well as his podcast, Waveform: The MKBHD Podcast. The name of his YouTube channel is a concatenation of MKB and HD.</p>",    
+				    "alignment": "left",
+				    "blockWidth": "100%",
+				    "blockHeight": "fit-content",
+				    "fitHeightToContent": true,
+				    "boundingBox": true,
+				    "contentPadding": "16px"
+				}
+			}
+		}
 	}
 }
